@@ -1,7 +1,6 @@
 const Hello = (props) => {
-  console.log(`props name on ${props.age}`);
-  const name = props.name;
-  const age = props.age;
+  const { name, age } = props;
+  console.log(`props name and age is ${name} ${age}`);
   const bornYear = () => new Date().getFullYear() - age;
 
   console.log(bornYear());
