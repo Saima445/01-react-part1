@@ -10,10 +10,8 @@ const refresh = () => {
   root.render(<App counter={counter} />);
 };
 
-refresh();
-counter += 1;
-console.log(counter);
-refresh();
-counter += 1;
-console.log(counter);
-refresh();
+setInterval(() => {
+  refresh();
+  counter += 1;
+  console.log(counter);
+}, 1000);
